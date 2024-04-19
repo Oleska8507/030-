@@ -1,21 +1,17 @@
-import { Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Profile } from './components/Profile';
 
-const Profile = () => {
-  return (
-    <h2>Это страница с профилем</h2>
-  )
-}
 const Friends = () => {
   return (
     <h2>Это страница с друзьями</h2>
   )
-}
+};
 const Shop = () => {
   return (
     <h2>Это магазин</h2>
   )
-}
+};
 
 function App() {
   return (
@@ -23,10 +19,10 @@ function App() {
     <div className="row">
     <div className="col-3">
     <div className="nav flex-column nav-pills">
-      <a href="/" className="nav-link">Главная</a>
-      <a href="profile" className="nav-link">Профиль</a>
-      <a href="friends" className="nav-link">Друзья</a>
-      <a href="shop" className="nav-link">Магазин</a>
+      <NavLink to="/" className="nav-link">Главная</NavLink>
+      <NavLink to="profile" className="nav-link">Профиль</NavLink>
+      <NavLink to="friends" className="nav-link">Друзья</NavLink>
+      <NavLink to="shop" className="nav-link">Магазин</NavLink>
       </div>
     </div>
     <div className="col-9">
