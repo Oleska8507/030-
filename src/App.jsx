@@ -1,17 +1,8 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Profile } from './components/Profile';
-
-const Friends = () => {
-  return (
-    <h2>Это страница с друзьями</h2>
-  )
-};
-const Shop = () => {
-  return (
-    <h2>Это магазин</h2>
-  )
-};
+import { Friends } from './components/Friends';
+import { Shop } from './components/Shop';
 
 function App() {
   return (
