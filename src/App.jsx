@@ -4,7 +4,8 @@ import { Profile } from './components/Profile';
 import { Friends } from './components/Friends';
 import { Shop } from './components/Shop';
 
-function App() {
+function App(props) {
+  // console.log(props);
   return (
   <div className="container mt-5">
     <div className="row">
@@ -19,8 +20,8 @@ function App() {
     <div className="col-9">
       <Routes>
         <Route path='/' element={<h2>вы в личном кабинете, выбор в меню слева</h2>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/friends' element={<Friends/>}/>
+        <Route path='/profile' element={<Profile function={props.users.key_getUser}/>}/>
+        <Route path='/friends' element={<Friends function={props.users.key_getUsers}/>}/>
         <Route path='/shop' element={<Shop/>}/>
       </Routes>
     <span></span>
