@@ -20,7 +20,7 @@ export const Friends = (props) => {
   let usersCount = Object.keys(users).length;
   let userRow = [];
   for (let i = 0; i < usersCount; i++) {
-    userRow.push(<TabeRow key={i} index={users[i].id} id={users[i].id} name={users[i].name} lastname={users[i].lastname} email={users[i].email}/>);
+    userRow.push(<TabeRow key={i} index={i} id={users[i].id} name={users[i].name} lastname={users[i].lastname} email={users[i].email}/>);
   }
   return (
     <>
