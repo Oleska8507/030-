@@ -20,7 +20,7 @@ export const Friends = (props) => {
   let usersCount = Object.keys(users).length;
   let userRow = [];
   for (let i = 0; i < usersCount; i++) {
-    userRow.push(<TabeRow key={i} index={users[1].id} name={users[i].name} lastname={users[i].lastname} email={users[i].email}/>);
+    userRow.push(<TabeRow key={i} index={users[i].id} id={users[i].id} name={users[i].name} lastname={users[i].lastname} email={users[i].email}/>);
   }
   return (
     <>
@@ -34,8 +34,8 @@ export const Friends = (props) => {
       <td scope="col">email</td>
     </tr>
   </thead>
-    {userRow}
-</table>
+  <tbody>{userRow}</tbody>
+    </table>
     </div>
     </>
   )
